@@ -1,0 +1,122 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto');
+$green: #00cc33;
+$red: #dd0000;
+$yellow: #c95;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.text-center {
+    text-align: center;
+}
+.pull-right {
+    float: right;
+}
+.btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+    }
+    &.btn--success {
+        color: $green;
+        &:hover {
+            background-color: $green;
+            color: #fff;
+        }
+    }
+    &.btn--danger {
+        color: $red;
+        &:hover {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+    &.btn--warning {
+        color: $yellow;
+        &:hover {
+            background-color: $yellow;
+            color: #fff;
+        }
+    }
+}
+hr {
+    border: none;
+    border-top: 1px solid #d4d4d4;
+}
+ol {
+    counter-reset: li;
+    list-style: none;
+    font-size: 18px;
+    padding: 0 0 0 20px;
+    margin: 20px auto;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    .user-item {
+        position: relative;
+        display: block;
+        padding: 0.4em 0.4em 0.4em 2em;
+        margin: 0.5em 0;
+        background: #ddd;
+        color: #444;
+        text-decoration: none;
+        border-radius: 0.3em;
+        transition: all 0.3s ease-out;
+        .user-item__title {
+            line-height: 31px;
+        }
+        .user-item__editor {
+            display: inline-block;
+            width: calc(100% - 120px);
+            height: 31px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+        &:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -1.3em;
+            top: 50%;
+            margin-top: -1.3em;
+            background: #87ceeb;
+            height: 2em;
+            width: 2em;
+            line-height: 2em;
+            border: 0.3em solid #fff;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 2em;
+            transition: all 0.3s ease-out;
+        }
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+}
